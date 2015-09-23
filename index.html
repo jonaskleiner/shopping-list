@@ -23,7 +23,7 @@
   </head>
   <body>
 	<section id ="intro">
-	 	<div class="container-fluid">
+	 	<div class="container">
   			<h1>Let's Go Shopping!</h1>
   			<div class="row">
   				<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
@@ -50,22 +50,47 @@
 				</div>
 			  </div>
 			</div>
+			<div class="row">
+  				<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
+  					<hr>
+  				</div>
+  			</div>
 		</div>
 	</section>
 	<!-- begin the shopping list -->
 	<section id="shopping-list">
-		<div class="container-fluid">
-			<form class="form-inline">
-			  <div class="form-group">
-			    <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
-			    <div class="input-group">
-			      <div class="input-group-addon">$</div>
-			      <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
-			      <div class="input-group-addon">.00</div>
-			    </div>
-			  </div>
-			  <button type="submit" class="btn btn-primary">Transfer cash</button>
+		<div class="container">
+			<form class="form-inline ctr">
+  				<div class="form-group">
+				    <label class="sr-only" for="addListItem">Item</label>
+				    <input type="item" class="form-control" id="addListItem" placeholder="Item">
+  				</div>
+  				<button type="submit" class="btn btn-info">Add It!</button>
 			</form>
+			<table class="table table-striped">
+				<thead>
+					<th class="col-lg-1 col-md-1 col-sm-1">Purchased?</th>
+					<th class="col-lg-4 col-md-4 col-sm-4">List of items</th>
+					<th class="col-lg-1 col-md-1 col-sm-1">Delete item?</th>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row"><span class="glyphicon glyphicon-ok"></span></th>
+						<td>Apples</td>
+						<td><span class="glyphicon glyphicon-minus"></span></td>
+					</tr>
+					<tr>
+						<th scope="row"><span class="glyphicon glyphicon-ok"></span></th>
+						<td>Grapes</td>
+						<td><span class="glyphicon glyphicon-minus"></span></td>
+					</tr>
+					<tr>
+						<th scope="row"><span class="glyphicon glyphicon-ok"></span></th>
+						<td>Banannas</td>
+						<td><span class="glyphicon glyphicon-minus"></span></td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</section>
 

@@ -41,7 +41,7 @@ hr{
     /* Set the hr color */
     color: #333; /* old IE */
     background-color: #333; /* Modern Browsers */
-    margin-bottom: 3em;
+    margin-bottom: 1em;
 }
 
 /* color styles */
@@ -70,3 +70,15 @@ hr{
 	text-align: center;
 	vertical-align: middle;
 }
+
+/* element styling */
+
+table {
+	margin-top: 3em;
+}
+
+#shopping-list {
+	margin-top: 3em;
+}
+
+
