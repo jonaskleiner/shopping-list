@@ -1,0 +1,72 @@
+/* styles for app */
+
+/* TEXT STYLING */
+
+h1 {
+	text-align: center;
+	margin-top: 1.25em;
+	font-family: 'Lobster', cursive;
+	font-size: 4em;
+}
+
+h3 {
+	height: 150px;
+	width: 150px;
+	max-width: 100%;
+	border-radius: 50%;
+    -o-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    display: block;
+    text-align: center;
+    position: relative;
+    margin: 0 auto 10px;
+    padding-top: 60px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+p {
+	font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    letter-spacing: -1px;
+    font-size: 1.5em;
+    margin: 10px 0 10px 0; 
+}
+
+hr{
+	border: none;
+    height: 1px;
+    /* Set the hr color */
+    color: #333; /* old IE */
+    background-color: #333; /* Modern Browsers */
+    margin-bottom: 3em;
+}
+
+/* color styles */
+
+.row-bl {
+	/* background-color: #1373e6; */
+	background: url(../img/pixel_weave.png);
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.add {
+	background-color: #f3c900;
+}
+
+.check {
+	background-color: #c77844;
+}
+
+.del {
+	background-color: #ff1a72;
+}
+
+.ctr {
+	margin: 0 auto;
+	text-align: center;
+	vertical-align: middle;
+}
