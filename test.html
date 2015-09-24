@@ -4,12 +4,55 @@
 	<title>testing jQuery val</title>
 	<script src="http://code.jquery.com/jquery.min.js"></script>
 	<script src="js/app.js"></script>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lobster|Quicksand:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<section id="input-stuff">
+<!-- <section id="input-stuff">
 		<input type="text" id="new-item">
 		<input type="submit" id="add">
 	<ul id="theList"></ul>
+</section> -->
+<section id="shopping-list">
+	
+		<div class="container">
+			<div class="ctr">
+  				<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
+				    <label class="sr-only">Item</label>
+				    <input type="text" class="form-control" id="aNewItem" placeholder="Item">
+  				</div>
+  				<button type="submit" id="add-it" class="btn btn-info">Add It!</button>
+			</div>
+	<!-- output items to a table -->
+			<table class="table table-striped">
+				<thead>
+					<th class="col-lg-1 col-md-1 col-sm-1">Purchased?</th>
+					<th class="col-lg-4 col-md-4 col-sm-4">List of items</th>
+					<th class="col-lg-1 col-md-1 col-sm-1">Delete item?</th>
+				</thead>
+				<tbody id="theList2">
+			<!--	<tr>
+						<th scope="row"><span class="glyphicon glyphicon-ok"></span></th>
+						<td>Apples</td>
+						<td><span class="glyphicon glyphicon-minus"></span></td>
+					</tr>
+					<tr>
+						<th scope="row"><span class="glyphicon glyphicon-ok"></span></th>
+						<td>Grapes</td>
+						<td><span class="glyphicon glyphicon-minus"></span></td>
+					</tr>
+					<tr>
+						<th scope="row"><span class="glyphicon glyphicon-ok"></span></th>
+						<td>Banannas</td>
+						<td><span class="glyphicon glyphicon-minus"></span></td>
+					</tr> hard coded vals -->
+				</tbody>
+			</table>
+		</div>
+
 </section>
 </body>
 </html>
