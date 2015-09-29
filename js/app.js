@@ -19,19 +19,29 @@ function addToList () {
 	// assign the value to a var called 'item2'
 	var item2 = $("#aNewItem").val();
 	// find id "theList2" and drop the var data into it
-	$("#theList2").append('<tr><td><span class="glyphicon glyphicon-ok"></span></td><td>'+item2+'</td><td><span class="glyphicon glyphicon-minus"></span></td></tr>');
+	$("#theList2").append('<tr><td><input type="checkbox" class="purchased"></td><td>'+item2+'</td><td><input type="submit" value="remove" class="removeIt" /></td></tr>');
 	// clear the input field
 	$("#aNewItem").val('');
+
+}
+
+function removeItem () {
+	// alert("hello");
+	$(this).closest("tr").remove();
+}
+
+function purchasedItem () {
+	$(this).closest("tr").css("backgroundColor", "red");
 }
 
 
-// when page loads jQuery do this shit
+// when page loads jQuery do this
 
 $(document).ready(function() {
 	// input items into list
-	// on click run the function addListItem
-	// $("#add").on('click', addListItem);
-	// input items into list
 	// on click run the function addToList
-	$("#add-it").on('click', addToList)
+	$("#add-it").on('click', addToList);
+	$(document).on('click','.removeIt', removeItem);
+	$(document).on('click','.purchased', purchasedItem);
 });
+
