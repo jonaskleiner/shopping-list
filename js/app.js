@@ -31,7 +31,15 @@ function removeItem () {
 }
 
 function purchasedItem () {
-	$(this).closest("tr").css("backgroundColor", "red");
+	// $(this).closest("tr").css("backgroundColor", "#AACCFF");
+
+	if ($(this).closest("tr").css('textDecoration') === 'line-through') {
+		$(this).closest("tr").css({backgroundColor: "transparent", textDecoration: "none"});
+		} 
+		else
+			{
+		$(this).closest("tr").css({backgroundColor: "#AACCFF", textDecoration: "line-through"});
+	};
 }
 
 
@@ -41,7 +49,18 @@ $(document).ready(function() {
 	// input items into list
 	// on click run the function addToList
 	$("#add-it").on('click', addToList);
+	// delete an item
 	$(document).on('click','.removeIt', removeItem);
+	// check an item off the list. if checked, uncheck it
 	$(document).on('click','.purchased', purchasedItem);
 });
 
+
+function purchasedItem () {
+
+    if ($(this).closest("tr").css('textDecoration') === 'line-through') {
+            $(this).closest("tr").css({backgroundColor: "transparent", textDecoration: "none"});
+                } else {
+            $(this).closest("tr").css({backgroundColor: "#CCC", textDecoration: "line-through"});
+        };
+}
