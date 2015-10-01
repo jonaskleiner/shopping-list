@@ -38,7 +38,7 @@ function purchasedItem () {
 		} 
 		else
 			{
-		$(this).closest("tr").css({backgroundColor: "#AACCFF", textDecoration: "line-through"});
+		$(this).closest("tr").css({backgroundColor: "#C77844", textDecoration: "line-through"});
 	};
 }
 
@@ -54,13 +54,3 @@ $(document).ready(function() {
 	// check an item off the list. if checked, uncheck it
 	$(document).on('click','.purchased', purchasedItem);
 });
-
-
-function purchasedItem () {
-
-    if ($(this).closest("tr").css('textDecoration') === 'line-through') {
-            $(this).closest("tr").css({backgroundColor: "transparent", textDecoration: "none"});
-                } else {
-            $(this).closest("tr").css({backgroundColor: "#CCC", textDecoration: "line-through"});
-        };
-}

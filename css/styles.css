@@ -54,7 +54,8 @@ hr{
 }
 
 .add {
-	background-color: #f3c900;
+	/* background-color: #f3c900; */
+	background-color: #5bc0de;
 }
 
 .check {
@@ -62,7 +63,7 @@ hr{
 }
 
 .del {
-	background-color: #ff1a72;
+	background-color: #f3c900;
 }
 
 .ctr {
@@ -80,5 +81,7 @@ table {
 #shopping-list {
 	margin-top: 3em;
 }
+
+.form-inline .form-control {width: 100%;}
 
 

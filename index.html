@@ -13,6 +13,10 @@
 
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Lobster|Quicksand:400,700' rel='stylesheet' type='text/css'>
+    <!-- JS -->
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,19 +35,19 @@
   				</div>
   			</div>
   			<div class="row row-bl">
-			  <div class="col-md-4 col-sm-4">
+			  <div class="col-lg-4 col-md-4 col-sm-4">
 			  	<div class="ctr">
 				  <h3 class="add">ADD</h3>
 				  <p>Add some items</p>
 			  	</div>
 			  </div>
-			  <div class="col-md-4 col-sm-4">
+			  <div class="col-lg-4 col-md-4 col-sm-4">
 			  	<div class="ctr">
 				  	<h3 class="check">CHECK</h3>
 				  	<p>Check them off your list</p>
 				</div>
 			  </div>
-			  <div class="col-md-4 col-sm-4">
+			  <div class="col-lg-4 col-md-4 col-sm-4">
 			  	<div class="ctr">
 				  	<h3 class="del">DELETE</h3>
 				  	<p>Remove unneeded</p>
@@ -60,36 +64,25 @@
 	<!-- begin the shopping list -->
 	<section id="shopping-list">
 		<div class="container">
-			<form class="form-inline ctr">
-  				<div class="form-group">
-				    <label class="sr-only" for="addListItem">Item</label>
-				    <input type="item" class="form-control" id="addListItem" placeholder="Item">
+			<div class="form-inline ctr">
+				<div class="col-lg-5 col-lg-offset-3 col-md-5 col-md-offset-3 col-sm-5 col-sm-offset-3 col-xs-5 col-xs-offset-3">
+				    <label class="sr-only">Item</label>
+				    <input type="text" class="form-control" id="aNewItem" placeholder="Item">
   				</div>
-  				<button type="submit" class="btn btn-info">Add It!</button>
-			</form>
+  				<div class="col-lg-1 col-md-1 col-sm-1">
+  					<button type="submit" id="add-it" class="btn btn-info">Add It!</button>
+  				</div>
+			</div>
+
 	<!-- output items to a table -->
 			<table class="table table-striped">
 				<thead>
 					<th class="col-lg-1 col-md-1 col-sm-1">Purchased?</th>
-					<th class="col-lg-4 col-md-4 col-sm-4">List of items</th>
-					<th class="col-lg-1 col-md-1 col-sm-1">Delete item?</th>
+					<th class="col-lg-4 col-md-4 col-sm-4">Items</th>
+					<th class="col-lg-1 col-md-1 col-sm-1">Remove Item?</th>
 				</thead>
-				<tbody>
-					<tr>
-						<th scope="row"><span class="glyphicon glyphicon-ok"></span></th>
-						<td>Apples</td>
-						<td><span class="glyphicon glyphicon-minus"></span></td>
-					</tr>
-					<tr>
-						<th scope="row"><span class="glyphicon glyphicon-ok"></span></th>
-						<td>Grapes</td>
-						<td><span class="glyphicon glyphicon-minus"></span></td>
-					</tr>
-					<tr>
-						<th scope="row"><span class="glyphicon glyphicon-ok"></span></th>
-						<td>Banannas</td>
-						<td><span class="glyphicon glyphicon-minus"></span></td>
-					</tr>
+				<tbody id="theList2">
+				<!-- items output here -->
 				</tbody>
 			</table>
 		</div>
@@ -97,7 +90,5 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
