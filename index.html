@@ -64,15 +64,15 @@
 	<!-- begin the shopping list -->
 	<section id="shopping-list">
 		<div class="container">
-			<div class="form-inline ctr">
+			<form id="add-form" class="form-inline ctr">
 				<div class="col-lg-5 col-lg-offset-3 col-md-5 col-md-offset-3 col-sm-5 col-sm-offset-3 col-xs-5 col-xs-offset-3">
 				    <label class="sr-only">Item</label>
-				    <input type="text" class="form-control" id="aNewItem" placeholder="Item">
+				    <input type="text" class="form-control" id="aNewItem" placeholder="Item" required>
   				</div>
   				<div class="col-lg-1 col-md-1 col-sm-1">
   					<button type="submit" id="add-it" class="btn btn-info">Add It!</button>
   				</div>
-			</div>
+			</form>
 
 	<!-- output items to a table -->
 			<table class="table table-striped">

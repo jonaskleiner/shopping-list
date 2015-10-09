@@ -12,12 +12,14 @@ function addListItem () {
 	$("#new-item").val('');
 }
 
-// test #2
+// live js
 
-function addToList () {
+function addToList (event) {
+	event.preventDefault();
 	// grab the value of the input field 'aNewItem'
 	// assign the value to a var called 'item2'
 	var item2 = $("#aNewItem").val();
+	item2 = $('<div>').text(item2).html();
 	// find id "theList2" and drop the var data into it
 	$("#theList2").append('<tr><td><input type="checkbox" class="purchased"></td><td>'+item2+'</td><td><input type="submit" value="remove" class="removeIt" /></td></tr>');
 	// clear the input field
@@ -48,7 +50,7 @@ function purchasedItem () {
 $(document).ready(function() {
 	// input items into list
 	// on click run the function addToList
-	$("#add-it").on('click', addToList);
+	$("#add-form").on('submit', addToList);
 	// delete an item
 	$(document).on('click','.removeIt', removeItem);
 	// check an item off the list. if checked, uncheck it
